@@ -5,10 +5,15 @@
 ## Features
 
 - **Short-term and Long-term Memory**: Manages memory as short-term or long-term based on usage and relevance.
+
 - **Contextual Retrieval**: Retrieves memories based on embeddings, concepts, and past interactions.
+
 - **Concept Extraction and Embeddings**: Uses OpenAI or Ollama models for concept extraction and embedding generation.
+
 - **Graph-Based Associations**: Builds a concept graph and uses spreading activation for relevance-based retrieval.
+
 - **Hierarchical Clustering**: Clusters similar memories into semantic groups to aid in contextually relevant retrieval.
+
 - **Decay and Reinforcement**: Older memories decay over time, while frequently accessed memories are reinforced.
 
 ## Installation
@@ -18,17 +23,15 @@ You can install Memoripy with pip:
 ```bash
 pip install memoripy
 ```
+
 ## Usage
-The following example demonstrates how to set up and use Memoripy.
+The following example demonstrates how to set up and use Memoripy in a Python script.
 
-
-`main.py`
-
-The main.py file demonstrates the primary functionality of Memoripy, including initialization, storing interactions, retrieving relevant memories, and generating responses.
+### Example: `example.py`
+This example script shows the primary functionality of Memoripy, including initialization, storing interactions, retrieving relevant memories, and generating responses.
 
 ```bash
-from memory_manager import MemoryManager
-from json_storage import JSONStorage
+from memoripy import MemoryManager, JSONStorage
 
 def main():
     # Replace 'your-api-key' with your actual OpenAI API key
@@ -45,7 +48,7 @@ def main():
     # Choose your storage option
     storage_option = JSONStorage("interaction_history.json")
     # Or use in-memory storage:
-    # from in_memory_storage import InMemoryStorage
+    # from memoripy import InMemoryStorage
     # storage_option = InMemoryStorage()
 
     # Initialize the MemoryManager with the selected models and storage
@@ -86,21 +89,24 @@ if __name__ == "__main__":
     main()
 ```
 ## Classes and Modules
-**MemoryManager**: Manages memory interactions, retrieves relevant information, and generates responses based on past interactions.
-**MemoryStore**: Stores and organizes interactions in short-term and long-term memory, with support for clustering and retrieval based on relevance.
-**InMemoryStorage and JSONStorage**: Store memory in either in-memory data structures or JSON files.
-**BaseStorage**: Abstract base class for defining storage methods.
+- `MemoryManager`: Manages memory interactions, retrieves relevant information, and generates responses based on past interactions.
 
-## Core Functionalities
-1. Initialize Memory: Load previous interactions from the chosen storage and initialize memory.
+- `MemoryStore`: Stores and organizes interactions in short-term and long-term memory, with support for clustering and retrieval based on relevance.
 
-2. Add Interaction: Store a new interaction with its embedding, concepts, prompt, and output.
+- `InMemoryStorage` and `JSONStorage`: Store memory in either in-memory data structures or JSON files.
 
-3. Retrieve Relevant Interactions: Search past interactions based on a query using cosine similarity, decay factors, and spreading activation.
+- `BaseStorage`: Abstract base class for defining storage methods.
 
-4. Generate Response: Combine the current prompt and retrieved interactions to generate a contextually relevant response.
+##Core Functionalities
+1. **Initialize Memory**: Load previous interactions from the chosen storage and initialize memory.
 
-5. Decay and Reinforcement: Increase decay on unused memories and reinforce frequently accessed memories.
+2. **Add Interaction**: Store a new interaction with its embedding, concepts, prompt, and output.
+
+3. **Retrieve Relevant Interactions**: Search past interactions based on a query using cosine similarity, decay factors, and spreading activation.
+
+4. **Generate Response**: Combine the current prompt and retrieved interactions to generate a contextually relevant response.
+
+5. **Decay and Reinforcement**: Increase decay on unused memories and reinforce frequently accessed memories.
 
 ## Requirements
 Memoripy relies on several dependencies, including:
@@ -119,7 +125,7 @@ Memoripy relies on several dependencies, including:
 
 - `ollama`
 
-These dependencies will be installed automatically with `pip install memoripy`.
+These dependencies will be installed automatically with pip install memoripy.
 
 ## License
 Memoripy is licensed under the MIT License.
