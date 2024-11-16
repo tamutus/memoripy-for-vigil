@@ -128,7 +128,7 @@ Memoripy relies on several dependencies, including:
 These dependencies will be installed automatically with pip install memoripy.
 
 ## License
-Memoripy is licensed under the MIT License.
+Memoripy is licensed under the Apache 2.0 License.
 
 ## Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests for improvements.
