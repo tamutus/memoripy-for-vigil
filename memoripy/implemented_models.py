@@ -77,8 +77,7 @@ class OpenAIChatModel(ChatModel):
     def extract_concepts(self, text: str) -> list[str]:
         chain = self.prompt_template | self.llm | self.parser
         response = chain.invoke({"text": text})
-        parsed_response = self.parser.parse(response.content)
-        concepts = parsed_response.get("concepts", [])
+        concepts = response.get("concepts", [])
         print(f"Concepts extracted: {concepts}")
         return concepts
 
@@ -105,7 +104,6 @@ class OllamaChatModel(ChatModel):
     def extract_concepts(self, text: str) -> list[str]:
         chain = self.prompt_template | self.llm | self.parser
         response = chain.invoke({"text": text})
-        parsed_response = self.parser.parse(response.content)
-        concepts = parsed_response.get("concepts", [])
+        concepts = response.get("concepts", [])
         print(f"Concepts extracted: {concepts}")
         return concepts
