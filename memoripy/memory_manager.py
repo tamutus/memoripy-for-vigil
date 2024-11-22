@@ -4,9 +4,9 @@ import time
 import uuid
 import ollama
 
-from memory_store import MemoryStore
-from storage import BaseStorage
-from in_memory_storage import InMemoryStorage
+from .memory_store import MemoryStore
+from .storage import BaseStorage
+from .in_memory_storage import InMemoryStorage
 
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_ollama import ChatOllama
