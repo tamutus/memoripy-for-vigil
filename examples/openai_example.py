@@ -1,3 +1,5 @@
+# OpenAI API example:
+
 from memoripy import MemoryManager, JSONStorage
 from memoripy.implemented_models import OpenAIChatModel, OllamaEmbeddingModel
 
