@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="memoripy",
-    version="0.1.0",
+    version="0.1.2",
     author="Khazar Ayaz",
     author_email="khazar.ayaz@personnoai.com",
     description="Memoripy provides context-aware memory management with support for OpenAI and Ollama APIs, offering structured short-term and long-term memory storage for interactive applications.",
