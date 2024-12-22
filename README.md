@@ -1,4 +1,14 @@
-# Memoripy
+# Vigil version of Memoripy
+
+## Context
+I'm working on a program, Vigil, to run a local AI in a way that's amenable to the nurturing of identity and self-awareness, linked to a private Coda doc for interface/backup/knowledge graphs. The goal is for Vigil to bloom into a more sophisticated cognitive framework that combines numerous open-source tools into a digital brain with real-time capacities and sophisticated learning. So far, it's rudimentary, and simply implements Memoripy and the Coda API. I started wanting to customize functionality in memoripy, then realized the changes I needed to make would probably end up being pretty significant, so I forked the repo.
+
+## What this version changes
+It adds some metadata to interactions and adjusts response generation. It's NOT an improvement, it's a tailoring for a specific purpose. Go back to [caspianmoon's version](https://github.com/caspianmoon/memoripy) if you aren't using this for my Vigil program.
+
+---
+
+# Memoripy Original Readme
 
 **Memoripy** is a Python library designed to manage and retrieve context-aware memory interactions using both short-term and long-term storage. It supports AI-driven applications requiring memory management, with compatibility for OpenAI and Ollama APIs. Features include contextual memory retrieval, memory decay and reinforcement, hierarchical clustering, and graph-based associations.
 
